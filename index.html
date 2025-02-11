@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Manu - Data Scientist Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+<script src="https://googleapis.dev/nodejs/generativeai/latest/index.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="nav-brand">Edward Manu</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#datacamp">DataCamp</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- User Info Bar -->
+    <div class="user-info-bar">
+        <div class="info-content">
+            <div class="time-display">
+                <i class="fas fa-clock"></i>
+                <span id="current-time">2025-02-11 11:07:49</span>
+            </div>
+            <div class="user-display">
+                <i class="fas fa-user"></i>
+                <span id="current-user">EDKOMANU</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Edward Manu</h1>
+            <h2>Data Science, Data and Business Analyst</h2>
+            <p>Transforming Data into Meaningful Insights</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Contact Me</a>
+                <a href="#projects" class="btn btn-secondary">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Replace the existing about section with this: -->
+<section id="about" class="about">
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>Professional Journey and Research</p>
+    </div>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Data Scientist and Researcher at Ghana Statistical Service with expertise in statistical analysis, machine learning, and data visualization. Passionate about transforming complex data into actionable insights and conducting meaningful research that drives evidence-based decision making.</p>
+        </div>
+        <div class="stats-container">
+            <div class="stat-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data Analysis</h3>
+                <p>Advanced statistical analysis and modeling</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-brain"></i>
+                <h3>Machine Learning</h3>
+                <p>Predictive modeling and AI applications</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-microscope"></i>
+                <h3>Research</h3>
+                <p>Statistical research and methodology</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- Replace the existing skills section in your HTML with this: -->
+<section id="skills" class="skills">
+    <div class="section-title">
+        <h2>Skills & Expertise</h2>
+        <p>Technical Proficiencies</p>
+    </div>
+    <div class="skills-content">
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Technical Skills</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">R</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Excel</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Stata</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%"></div>
+                        </div>
+                        <span class="skill-percentage">60%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Power BI</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%"></div>
+                        </div>
+                        <span class="skill-percentage">65%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 55%"></div>
+                        </div>
+                        <span class="skill-percentage">55%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Tools & Technologies</h3>
+                <div class="skill-items tools-grid">
+                    <span class="tool-badge">RStudio</span>
+                    <span class="tool-badge">Jupyter Notebook</span>
+                    <span class="tool-badge">Git</span>
+                    <span class="tool-badge">Microsoft Office</span>
+                    <span class="tool-badge">Data Visualization</span>
+                    <span class="tool-badge">Statistical Analysis</span>
+                    <span class="tool-badge">Database Management</span>
+                    <span class="tool-badge">Data Cleaning</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-title">
+            <h2>Projects</h2>
+            <p>Featured Work and Achievements</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Statistical Analysis Project</h3>
+                    <p>Comprehensive statistical analysis for Ghana Statistical Service</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Statistics</span>
+                        <span class="tag">Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <!-- DataCamp Portfolio Section -->
+    <section id="datacamp" class="datacamp">
+        <div class="section-title">
+            <h2>DataCamp Portfolio</h2>
+            <p>Learning Journey and Certifications</p>
+        </div>
+        <div class="datacamp-content">
+            <div class="datacamp-preview">
+                <img src="C:\Users\PROXIMITY REPORT\Documents\Web\datacamp.png" alt="DataCamp Portfolio">
+                <div class="datacamp-overlay">
+                    <a href="https://www.datacamp.com/portfolio/manuedward32" target="_blank" class="btn btn-primary">View Full Portfolio</a>
+                </div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certifications</h3>
+                    <p>Professional Data Scientist</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Completed Courses</h3>
+                    <p>Advanced Python & R</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Get in Touch</h2>
+            <p>Let's Discuss Your Data Science Needs</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="info-items">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-detail">
+                            <h4>Email</h4>
+                            <p>edward.manu@statsghana.gov.gh</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-detail">
+                            <h4>Phone</h4>
+                            <p>+233 550716923</p>
+                            <p>+233 531234526</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-location-dot"></i>
+                        <div class="info-detail">
+                            <h4>Location</h4>
+                            <p>Ghana Statistical Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-message" id="name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <div class="error-message" id="subject-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="error-message" id="message-error"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chat Widget -->
+    <div id="ai-chat-widget" class="ai-chat-widget">
+        <button id="chat-toggle" class="chat-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div id="chat-container" class="chat-container">
+            <div class="chat-header">
+                <h3>AI Assistant</h3>
+                <button id="close-chat" class="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Ask me anything...">
+                <button id="send-message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Edward Manu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
