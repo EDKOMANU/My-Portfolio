@@ -372,4 +372,90 @@ async function sendChatMessage() {
         console.error('Error getting AI response:', error);
         addMessageToChat('ai', 'Sorry, I encountered an error. Please try again.');
     }
+    // Add this after your existing code
+
+// Data Visualization
+async function loadData() {
+    try {
+        const response = await fetch('data.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error loading data:', error);
+        return null;
+    }
+}
+
+function displayData(data) {
+    const dataGrid = document.getElementById('dataGrid');
+    const filterSelect = document.getElementById('dataFilter');
+    
+    // Clear existing content
+    dataGrid.innerHTML = '';
+    
+    // Create data cards
+    data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'data-card';
+        card.innerHTML = `
+            <div class="data-card-header">
+                <h3>${item.title || 'Untitled'}</h3>
+            </div>
+            <div class="data-card-body">
+                <p>${item.description || 'No description available'}</p>
+                <div class="data-stats">
+                    ${Object.entries(item.statistics || {}).map(([key, value]) => `
+                        <div class="stat-item">
+                            <span class="stat-label">${key}:</span>
+                            <span class="stat-value">${value}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        dataGrid.appendChild(card);
+    });
+
+    // Create chart if Chart.js is available
+    if (window.Chart && data.length > 0) {
+        createChart(data);
+    }
+}
+
+function createChart(data) {
+    const ctx = document.getElementById('dataChart').getContext('2d');
+    
+    // Assuming data has numeric values to chart
+    const chartData = {
+        labels: data.map(item => item.title || 'Untitled'),
+        datasets: [{
+            label: 'Data Values',
+            data: data.map(item => item.value || 0),
+            backgroundColor: 'rgba(52, 152, 219, 0.5)',
+            borderColor: 'rgba(52, 152, 219, 1)',
+            borderWidth: 1
+        }]
+    };
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: chartData,
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// Load and display data when page loads
+document.addEventListener('DOMContentLoaded', async () => {
+    const data = await loadData();
+    if (data) {
+        displayData(data);
+    }
+});
 }
