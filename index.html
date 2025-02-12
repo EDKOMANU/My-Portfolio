@@ -190,7 +190,28 @@
             <!-- Add more project cards as needed -->
         </div>
     </section>
-
+<!-- Add this after your skills section and before the contact section -->
+<section id="data-visualization" class="data-section">
+    <div class="section-title">
+        <h2>Data Analysis</h2>
+        <p>Research Data Visualization</p>
+    </div>
+    <div class="data-container">
+        <div class="data-filters">
+            <select id="dataFilter" class="data-filter-select">
+                <option value="all">All Data</option>
+                <!-- Options will be populated from JSON -->
+            </select>
+        </div>
+        <div class="data-grid" id="dataGrid">
+            <!-- Data will be populated here -->
+        </div>
+        <div class="data-chart">
+            <canvas id="dataChart"></canvas>
+        </div>
+    </div>
+</section>
+    
     <!-- DataCamp Portfolio Section -->
     <section id="datacamp" class="datacamp">
         <div class="section-title">
