@@ -195,7 +195,7 @@ function initializeSkillsAnimation() {
                 if (entry.isIntersecting) {
                     const targetWidth = entry.target.parentElement.getAttribute('data-level') || '0';
                     entry.target.style.width = `${targetWidth}%`;
-                    observer.unobserve(entry.target);
+                    observer.observe(entry.target);
                 }
             });
         },
