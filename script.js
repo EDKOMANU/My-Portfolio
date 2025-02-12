@@ -377,7 +377,7 @@ async function sendChatMessage() {
 // Data Visualization
 async function loadData() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('Defaecationpoints_20250212-151846.json');
         const data = await response.json();
         return data;
     } catch (error) {
