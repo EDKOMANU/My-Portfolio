@@ -194,7 +194,7 @@ function initializeSkillsAnimation() {
         (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const targetWidth = entry.target.parentElement.getAttribute('data-level') || '0';
+                    const targetWidth = entry.target.parentElement.getAttribute('data-level');
                     entry.target.style.width = `${targetWidth}%`;
                     observer.observe(entry.target);
                 }
